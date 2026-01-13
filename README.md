@@ -26,7 +26,7 @@ Nu ska du se till att "maskineriet" fungerar:
 * Skapa enkla behållare i `index.html` med unika **ID:n**.
 * Hämta elementen i din TS-fil med `document.getElementById()`.
 * Använd **Type Assertion** (`as HTML...`) för rätt elementtyp.
-* **Mål:** Du ska kunna hämta information från din lista och skriva ut den på sidan (t.ex. via `.textContent` eller `.src`).
+* **Mål:** Du ska kunna hämta information från ett av objekten i din lista (t.ex. det första) och skriva ut det på sidan... (t.ex. via `.textContent`).
 
 ---
 
