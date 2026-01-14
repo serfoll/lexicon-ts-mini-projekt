@@ -1,0 +1,23 @@
+{
+  "name": "lexicon-ts-mini-projekt",
+  "version": "1.0.0",
+  "description": "Välkommen till din första stora TypeScript-utmaning! I den här uppgiften ska du bygga fundamentet till en applikation.",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serfoll/lexicon-ts-mini-projekt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/serfoll/lexicon-ts-mini-projekt/issues"
+  },
+  "homepage": "https://github.com/serfoll/lexicon-ts-mini-projekt#readme",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
