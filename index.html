@@ -3,10 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stash linx</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+
     <script type="module" src="./dist/main.js"></script>
+    <title>Stash linx</title>
   </head>
   <body>
-    <h1>Stash Linx</h1>
+    <header>
+      <h1>Stash Linx</h1>
+      <button type="button" class="btn" data-variant="clr-mode">
+        <span class="material-icons"> light_mode </span>
+        <span class="sr-only">Toggle Dark Mode</span>
+      </button>
+    </header>
+
+    <main id="app">
+      <button type="button" class="btn" data-variant="add">
+        <span class="material-icons"> add </span>
+        <span class="sr-only">Add new link</span>
+      </button>
+    </main>
   </body>
 </html>

@@ -54,4 +54,57 @@ const links: Link[] = [
   },
 ];
 
-console.log(links);
+const appEl = document.querySelector<HTMLElement>("#app");
+
+const linksEl: HTMLUListElement = document.createElement("ul");
+
+linksEl.classList.add("links");
+
+for (const link of links) {
+  const itemEl: HTMLLIElement = document.createElement("li");
+  const linkEl: HTMLAnchorElement = document.createElement("a");
+  const copyBtnEl: HTMLButtonElement = document.createElement("button");
+  const copyBtnIconEl: HTMLSpanElement = document.createElement("span");
+  const copyBtnTxtEl: HTMLSpanElement = document.createElement("span");
+  const deleteBtnEl: HTMLButtonElement = document.createElement("button");
+  const deleteBtnIconEl: HTMLSpanElement = document.createElement("span");
+  const deleteBtnTxtEl: HTMLSpanElement = document.createElement("span");
+  const editBtnEl: HTMLButtonElement = document.createElement("button");
+  const editBtnIconEl: HTMLSpanElement = document.createElement("span");
+  const editBtnTxtEl: HTMLSpanElement = document.createElement("span");
+
+  itemEl.classList.add("item");
+  linkEl.classList.add("link");
+
+  copyBtnEl.classList.add("btn");
+  copyBtnIconEl.classList.add("material-icons");
+  copyBtnIconEl.textContent = "content_copy";
+  copyBtnTxtEl.textContent = "Copy link";
+  copyBtnTxtEl.classList.add("sr-only");
+  copyBtnEl.append(copyBtnIconEl, copyBtnTxtEl);
+
+  editBtnEl.classList.add("btn");
+  editBtnIconEl.classList.add("material-icons");
+  editBtnIconEl.textContent = "edit";
+  editBtnTxtEl.textContent = "Edit link";
+  editBtnTxtEl.classList.add("sr-only");
+  editBtnEl.append(editBtnIconEl, editBtnTxtEl);
+
+  deleteBtnEl.classList.add("btn");
+  deleteBtnIconEl.classList.add("material-icons");
+  deleteBtnIconEl.textContent = "delete";
+  deleteBtnTxtEl.textContent = "Delete link";
+  deleteBtnTxtEl.classList.add("sr-only");
+  deleteBtnEl.append(deleteBtnIconEl, deleteBtnTxtEl);
+
+  linkEl.href = link.url;
+  linkEl.textContent = link.title;
+  linkEl.target = "_blank";
+  linkEl.rel = "noopener noreferrer";
+
+  itemEl.append(linkEl, copyBtnEl, editBtnEl, deleteBtnEl);
+
+  linksEl.append(itemEl);
+}
+
+appEl && appEl.append(linksEl);
